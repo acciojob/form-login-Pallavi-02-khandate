@@ -1,15 +1,20 @@
 function getFormvalue() {
     //Write your code here
 
-	let first=document.getElementByTagName('input')[0]
-	let last=document.getElementByTagName('input')[1]
-	// let form=document.getElementById('form1')
+	    // Prevent page reload
+    event.preventDefault();
 
-	let fullName =`${first.value} ${last.value}`
+    // Get the form
+    const form = document.getElementById("form1");
 
-	alert(fullName)	;
+    // Read input values
+    let firstName = form.fname.value.trim();
+    let lastName = form.lname.value.trim();
 
-	document.getElementById('form1').addEventListener('submit', getFormvalue)
+    // Show full name
+    alert(firstName + " " + lastName);
 
+
+	
 	
 }
