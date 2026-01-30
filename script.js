@@ -3,16 +3,13 @@ function getFormvalue() {
 
 	let first=document.getElementByTagName('input')[0]
 	let last=document.getElementByTagName('input')[1]
-	let btn=document.getElementById('input')[2]
+	// let form=document.getElementById('form1')
 
 	let fullName =`${first.value} ${last.value}`
 
-		
+	alert(fullName)	;
 
-	btn.addEventListener("click", function(){
-		
-		alert(fullName)
-	})
+	document.getElementById('form1').addEventListener('submit', getFormvalue)
 
 	
 }
